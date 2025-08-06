@@ -1,0 +1,55 @@
+Subdomain Enumeration
+
+python3 sublist3r.py -d example.com -o subdomains.txt
+
+Total Unique Subdomains Found: 7
+AS207960 Test Intermediate - example.com
+www.example.com
+dev.example.com
+m.example.com
+products.example.com
+support.example.com
+m.testexample.com
+
+amass enum -d example.com -o amass_results.txt
+
+example.com (FQDN) --> ns_record --> a.iana-servers.net (FQDN)
+example.com (FQDN) --> ns_record --> b.iana-servers.net (FQDN)
+www.example.com (FQDN) --> cname_record --> www.example.com-v4.edgesuite.net (FQDN)                                                                     
+example.com (FQDN) --> a_record --> 23.192.228.84 (IPAddress)
+example.com (FQDN) --> a_record --> 23.215.0.136 (IPAddress)
+example.com (FQDN) --> a_record --> 23.215.0.138 (IPAddress)
+example.com (FQDN) --> a_record --> 96.7.128.175 (IPAddress)
+example.com (FQDN) --> a_record --> 96.7.128.198 (IPAddress)
+example.com (FQDN) --> a_record --> 23.192.228.80 (IPAddress)
+a.iana-servers.net (FQDN) --> a_record --> 199.43.135.53 (IPAddress)
+www.example.com-v4.edgesuite.net (FQDN) --> cname_record --> a1422.dscr.akamai.net (FQDN)                                                               
+23.192.228.0/22 (Netblock) --> contains --> 23.192.228.80 (IPAddress)
+23.192.228.0/22 (Netblock) --> contains --> 23.192.228.84 (IPAddress)
+96.7.128.0/23 (Netblock) --> contains --> 96.7.128.198 (IPAddress)
+96.7.128.0/23 (Netblock) --> contains --> 96.7.128.175 (IPAddress)
+23.215.0.0/22 (Netblock) --> contains --> 23.215.0.138 (IPAddress)
+23.215.0.0/22 (Netblock) --> contains --> 23.215.0.136 (IPAddress)
+199.43.135.0/24 (Netblock) --> contains --> 199.43.135.53 (IPAddress)
+20940 (ASN) --> managed_by --> AKAMAI-ASN1 (RIROrganization)
+20940 (ASN) --> announces --> 23.192.228.0/22 (Netblock)
+20940 (ASN) --> announces --> 96.7.128.0/23 (Netblock)
+20940 (ASN) --> announces --> 23.215.0.0/22 (Netblock)
+26710 (ASN) --> managed_by --> ICANN-ANYCASTED-SERVICES - ICANN (RIROrganization)                                                                       
+26710 (ASN) --> announces --> 199.43.135.0/24 (Netblock)
+b.iana-servers.net (FQDN) --> a_record --> 199.43.133.53 (IPAddress)
+a1422.dscr.akamai.net (FQDN) --> a_record --> 103.86.38.27 (IPAddress)
+a1422.dscr.akamai.net (FQDN) --> a_record --> 103.86.38.56 (IPAddress)
+199.43.133.0/24 (Netblock) --> contains --> 199.43.133.53 (IPAddress)
+26710 (ASN) --> announces --> 199.43.133.0/24 (Netblock)
+103.86.36.0/22 (Netblock) --> contains --> 103.86.38.27 (IPAddress)
+103.86.36.0/22 (Netblock) --> contains --> 103.86.38.56 (IPAddress)
+55714 (ASN) --> managed_by --> APNIC-FIBERLINK-PK Fiberlink Pvt.Ltd (RIROrganization)                                                                   
+55714 (ASN) --> announces --> 103.86.36.0/22 (Netblock)
+
+
+assetfinder --subs-only example.com | tee assetfinder.txt
+
+example.com
+www.example.com
+                   

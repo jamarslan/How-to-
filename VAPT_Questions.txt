@@ -1,0 +1,181 @@
+
+✅ 1.  Fundamentals 
+
+1.  Easy:  What does the CIA Triad stand for in cybersecurity?
+2.  Slightly Harder:  What is the difference between a vulnerability and an exploit?
+3.  Medium:  How does penetration testing differ from vulnerability scanning?
+4.  Hard:  Give a real  world example where integrity in the CIA triad could be compromised.
+5.  Challenging:  What’s the difference between a false positive and a false negative in vulnerability assessment?
+
+
+
+🔎 2.  Networking & Web Basics 
+
+1.  Easy:  What is the purpose of the IP address `127.0.0.1`?
+2.  Slightly Harder:  What are the differences between TCP and UDP?
+3.  Medium:  Explain how DNS works when you open a website in your browser.
+4.  Hard:  What layer of the OSI model does HTTPS operate on, and why?
+5.  Challenging:  How can a misconfigured DNS server be exploited?
+
+
+
+🧪 3.  Enumeration & Scanning 
+
+1.  Easy:  What does the tool Nmap do?
+2.  Slightly Harder:  What is the difference between a SYN scan and a UDP scan?
+3.  Medium:  How would you find open ports and services on a target using Nmap?
+4.  Hard:  What does the `  A` flag do in an Nmap scan?
+5.  Challenging:  How can Nmap be detected or blocked by a target system?
+
+
+
+🕷 4.  Web Vulnerabilities (OWASP) 
+
+1.  Easy:  What is SQL Injection?
+2.  Slightly Harder:  What is the difference between stored and reflected XSS?
+3.  Medium:  How would you test for command injection manually?
+4.  Hard:  What steps would you take to test for authentication bypass on a login form?
+5.  Challenging:  How would you identify and exploit insecure direct object references (IDOR)?
+
+
+
+🧰 5.  Tools 
+
+1.  Easy:  What is Burp Suite used for?
+2.  Slightly Harder:  What is the purpose of Burp Repeater?
+3.  Medium:  How do you intercept and modify an HTTP request in Burp?
+4.  Hard:  What does Metasploit do, and when would you use it?
+5.  Challenging:  How would you explain a real  world scenario where you used a tool like Wireshark or Gobuster during testing?
+
+
+
+🧑‍💻 6.  Linux & Windows Basics 
+
+1.  Easy:  What command would you use in Linux to list files in a directory?
+2.  Slightly Harder:  What’s the difference between `chmod 777` and `chmod 755`?
+3.  Medium:  How would you find SUID binaries on a Linux system?
+4.  Hard:  What is a scheduled task in Windows and how can it be abused for privilege escalation?
+5.  Challenging:  Explain how you would escalate privileges on a Linux machine using a misconfigured cron job.
+
+✅ 1. Fundamentals (must be crystal clear)
+CIA Triad (Confidentiality, Integrity, Availability)
+
+Difference between:
+
+Vulnerability, Threat, Risk, Exploit
+
+Penetration Testing vs Vulnerability Assessment
+
+Types of hackers: white hat, black hat, gray hat
+
+OWASP Top 10 (just names and simple 1  line examples)
+
+🔎 2. Networking & Web Basics
+OSI Model (layers + real  world examples)
+
+TCP vs UDP (ports, handshakes, etc.)
+
+IP addressing, Subnetting basics
+
+Common ports & services (e.g., HTTP 80, HTTPS 443, SSH 22)
+
+DNS and how a domain is resolved
+
+HTTP methods: GET, POST, PUT, DELETE
+
+HTTP response codes (200, 301, 403, 404, 500)
+
+🧪 3. Enumeration & Scanning
+What is enumeration?
+
+Difference between active and passive reconnaissance
+
+Nmap:
+
+Common scan types (SYN, UDP, Version detection)
+
+Scan examples: nmapsVA target.com
+
+What information can you get from Nmap?
+
+Banner grabbing
+
+🕷 4. Web Vulnerabilities (OWASP Focus)
+SQL Injection (how to detect, how to exploit manually)
+
+Command Injection
+
+Cross  Site Scripting (Reflected, Stored)
+
+CSRF (basic understanding)
+
+File upload bypass / Path Traversal
+
+Authentication bypass (logic flaws, default creds)
+
+Broken Access Control (horizontal/vertical privilege escalation)
+
+🧰 5. Tools You May Be Asked About
+Burp Suite:
+
+Proxy, Repeater, Intruder
+
+Intercepting traffic
+
+Kali Linux basics
+
+Wireshark (basic packet analysis)
+
+Metasploit:
+
+What it is
+
+When to use it
+
+Example: search exploit, use, set RHOST, exploit
+
+Nikto / Dirb / Gobuster
+
+TryHackMe or Hack The Box (mention rooms you've done)
+
+🔐 6. Linux & Windows Basics
+Basic Linux commands (ls, grep, find, chmod, wget, curl)
+
+File permissions
+
+Windows Command Prompt basics (whoami, net user, tasklist)
+
+Common Linux and Windows privilege escalation vectors (kernel exploits, weak service permissions, SUID files)
+
+📄 7. Reporting & Soft Skills
+How to write a vulnerability report
+
+What to include in an executive summary
+
+Severity levels (CVSS score basics)
+
+Can you explain a technical concept to a non  technical person?
+
+Times when you showed initiative in learning cybersecurity
+
+👥 8. Behavioral Questions
+Why cybersecurity?
+
+What do you know about Devsinc?
+
+Tell me about a time you solved a problem
+
+What was your most interesting HTB or TryHackMe machine/project?
+
+Are you comfortable working in a team, learning from scratch, and documenting findings?
+
+🎯 Bonus (Stand Out)
+Knowledge of CTF challenges or real  world Bug Bounty writeups
+
+Familiarity with Git/GitHub
+
+Reading security blogs (PortSwigger, HackerOne, etc.)
+
+Experience in writing scripts for automation (even simple Python tools)
+
+
