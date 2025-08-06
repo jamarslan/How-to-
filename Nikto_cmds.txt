@@ -1,0 +1,169 @@
+nikto -h http://example.com
+--------------------------------------------------------------------------
+Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          23.192.228.84
++ Target Hostname:    example.com
++ Target Port:        80
++ Start Time:         2025-08-06 07:11:21 (GMT5)
+---------------------------------------------------------------------------
+nikto -h https://target.com -p 443
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          151.101.130.187
++ Target Hostname:    target.com
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject: /C=US/ST=Minnesota/L=Minneapolis/O=Target Corporation/CN=sites.target.com
+                   Ciphers: TLS_AES_128_GCM_SHA256
+                   Issuer:  /C=BE/O=GlobalSign nv-sa/CN=GlobalSign Atlas R3 OV TLS CA 2024 Q3
++ Start Time:         2025-08-06 08:28:08 (GMT5)
+---------------------------------------------------------------------------
++ Server: Varnish
++ Retrieved via header: 1.1 varnish
++ Retrieved x-served-by header: cache-fjr990027-FJR
++ The anti-clickjacking X-Frame-Options header is not present.
++ Uncommon header 'x-cache' found, with contents: HIT
++ Uncommon header 'strict-transport-security' found, with contents: max-age=31536000; includeSubDomains; preload
++ Uncommon header 'x-served-by' found, with contents: cache-fjr990027-FJR
++ Uncommon header 'x-timer' found, with contents: S1754450889.277904,VS0,VE0
++ Uncommon header 'x-cache-hits' found, with contents: 0
++ Root page / redirects to: https://www.target.com/
+---------------------------------------------------------------------------
+ nikto -h https://target.com -o scan.txt
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          151.101.2.187
++ Target Hostname:    target.com
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject: /C=US/ST=Minnesota/L=Minneapolis/O=Target Corporation/CN=sites.target.com
+                   Ciphers: TLS_AES_128_GCM_SHA256
+                   Issuer:  /C=BE/O=GlobalSign nv-sa/CN=GlobalSign Atlas R3 OV TLS CA 2024 Q3
++ Start Time:         2025-08-06 08:32:14 (GMT5)
+---------------------------------------------------------------------------
++ Server: Varnish
++ Retrieved via header: 1.1 varnish
++ Retrieved x-served-by header: cache-sin-wsss1830033-SIN
++ The anti-clickjacking X-Frame-Options header is not present.
++ Uncommon header 'strict-transport-security' found, with contents: max-age=31536000; includeSubDomains; preload
++ Uncommon header 'x-cache' found, with contents: HIT
++ Uncommon header 'x-timer' found, with contents: S1754451136.299467,VS0,VE1
++ Uncommon header 'x-cache-hits' found, with contents: 0
++ Uncommon header 'x-served-by' found, with contents: cache-sin-wsss1830033-SIN
++ Root page / redirects to: https://www.target.com/
+---------------------------------------------------------------------------nikto -h https://target.com -p 443 -ssl -Tuning x -o scan.html -Format html -Display V -id admin:admin -evasion 1,2
+
+- Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_report_xml
+V:Wed Aug  6 08:34:14 2025 - Loaded "Report as XML" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_cookies
+V:Wed Aug  6 08:34:14 2025 - Loaded "HTTP Cookie Internal IP" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_ssl
+V:Wed Aug  6 08:34:14 2025 - Loaded "SSL and cert checks" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_apache_expect_xss
+V:Wed Aug  6 08:34:14 2025 - Loaded "Apache Expect XSS" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_report_text
+V:Wed Aug  6 08:34:14 2025 - Loaded "Text reports" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_siebel
+V:Wed Aug  6 08:34:14 2025 - Loaded "Siebel Checks" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_robots
+V:Wed Aug  6 08:34:14 2025 - Loaded "Robots" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_dictionary_attack
+V:Wed Aug  6 08:34:14 2025 - Loaded "Dictionary attack" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_multiple_index
+V:Wed Aug  6 08:34:14 2025 - Loaded "Multiple Index" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_headers
+V:Wed Aug  6 08:34:14 2025 - Loaded "HTTP Headers" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_report_nbe
+V:Wed Aug  6 08:34:14 2025 - Loaded "NBE reports" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_report_msf
+V:Wed Aug  6 08:34:14 2025 - Loaded "Report data to Metasploit" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_core
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_content_search
+V:Wed Aug  6 08:34:14 2025 - Loaded "Content Search" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_favicon
+V:Wed Aug  6 08:34:14 2025 - Loaded "Favicon" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_report_html
+V:Wed Aug  6 08:34:14 2025 - Loaded "Report as HTML" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_parked
+V:Wed Aug  6 08:34:14 2025 - Loaded "Parked Detection" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_auth
+V:Wed Aug  6 08:34:14 2025 - Loaded "Guess authentication" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_paths
+V:Wed Aug  6 08:34:14 2025 - Loaded "Path Search" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_embedded
+V:Wed Aug  6 08:34:14 2025 - Loaded "Embedded Detection" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_fileops
+V:Wed Aug  6 08:34:14 2025 - Loaded "File Operations" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_outdated
+V:Wed Aug  6 08:34:14 2025 - Loaded "Outdated" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_tests
+V:Wed Aug  6 08:34:14 2025 - Loaded "Nikto Tests" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_apacheusers
+V:Wed Aug  6 08:34:14 2025 - Loaded "Apache Users" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_subdomain
+V:Wed Aug  6 08:34:14 2025 - Loaded "Sub-domain forcer" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_put_del_test
+V:Wed Aug  6 08:34:14 2025 - Loaded "Put/Delete test" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_httpoptions
+V:Wed Aug  6 08:34:14 2025 - Loaded "HTTP Options" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_cgi
+V:Wed Aug  6 08:34:14 2025 - Loaded "CGI" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_msgs
+V:Wed Aug  6 08:34:14 2025 - Loaded "Server Messages" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Wed Aug  6 08:34:14 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Wed Aug  6 08:34:14 2025 - Initialising plugin nikto_report_csv
+V:Wed Aug  6 08:34:14 2025 - Loaded "CSV reports" plugin.
+V:Wed Aug  6 08:34:14 2025 - Getting targets
+V:Wed Aug  6 08:34:21 2025 - Checking for HTTPS on port target.com:443, using HEAD
+V:Wed Aug  6 08:34:32 2025 - 301 for HEAD:	/
+V:Wed Aug  6 08:34:32 2025 - Opening reports (htm, scan.html)
+V:Wed Aug  6 08:34:32 2025 - Opening report for "Report as HTML" plugin
+V:Wed Aug  6 08:34:33 2025 - 6544 server checks loaded
+V:Wed Aug  6 08:34:33 2025 - Running start for "HTTP Headers" plugin
+V:Wed Aug  6 08:34:33 2025 - Running start for "Favicon" plugin
+V:Wed Aug  6 08:34:33 2025 - Running start for "Embedded Detection" plugin
+V:Wed Aug  6 08:34:33 2025 - Running start for "Content Search" plugin
+V:Wed Aug  6 08:34:33 2025 - Running start for "Guess authentication" plugin
+V:Wed Aug  6 08:34:33 2025 - 301 for GET:	/
++ Target IP:          151.101.66.187
++ Target Hostname:    target.com
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject: /C=US/ST=Minnesota/L=Minneapolis/O=Target Corporation/CN=sites.target.com
+                   Ciphers: TLS_AES_128_GCM_SHA256
+                   Issuer:  /C=BE/O=GlobalSign nv-sa/CN=GlobalSign Atlas R3 OV TLS CA 2024 Q3
++ Using Encoding:     Random URI encoding (non-UTF8)
++ Using Encoding:     Directory self-reference (/./)
++ Start Time:         2025-08-06 08:34:33 (GMT5)
+---------------------------------------------------------------------------
++ Server: Varnish
+--------------------------------------------------------------------------nikto -h https://target.com -Plugins Favicon
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          151.101.194.187
++ Target Hostname:    target.com
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject: /C=US/ST=Minnesota/L=Minneapolis/O=Target Corporation/CN=sites.target.com
+                   Ciphers: TLS_AES_128_GCM_SHA256
+                   Issuer:  /C=BE/O=GlobalSign nv-sa/CN=GlobalSign Atlas R3 OV TLS CA 2024 Q3
++ Start Time:         2025-08-06 08:36:46 (GMT5)
+---------------------------------------------------------------------------
++ Server: Varnish
++ Root page / redirects to: https://www.target.com/
+---------------------------------------------------------------------------
+nikto -h https://target.com -o nbe_scan.nbe -Format nbe
+--------------------------------------------------------------------------timestamps|network|host|port|nikto_id|prio|Nikto v2.1.5/2.1.5
+results||target.com|443|999986|Security Warning|GET : Retrieved via header: 1.1 varnish
+results||target.com|443|999986|Security Warning|GET : Retrieved x-served-by header: cache-sin-wsss1830064-SIN
+results||target.com|443|999976|Security Warning|GET : The anti-clickjacking X-Frame-Options header is not present.
+results||target.com|443|999100|Security Warning|GET : Uncommon header 'x-cache' found, with contents: HIT
+results||target.com|443|999100|Security Warning|GET : Uncommon header 'strict-transport-security' found, with contents: max-age=31536000; includeSubDomains; preload
+results||target.com|443|999100|Security Warning|GET : Uncommon header 'x-cache-hits' found, with contents: 0
+results||target.com|443|999100|Security Warning|GET : Uncommon header 'x-served-by' found, with contents: cache-sin-wsss1830064-SIN
+results||target.com|443|999100|Security Warning|GET : Uncommon header 'x-timer' found, with contents: S1754451688.601200,VS0,VE0
+---------------------------------------------------------------------------
