@@ -1,0 +1,14 @@
+# make sure you have venv support
+sudo apt update
+sudo apt install python3-venv python3-pip -y
+
+# create venv
+python3 -m venv ~/venvs/my-dev-env
+
+# activate it
+source ~/venvs/my-dev-env/bin/activate
+
+# upgrade pip inside venv and install packages
+python -m pip install --upgrade pip setuptools wheel
+pip install scapy
+
