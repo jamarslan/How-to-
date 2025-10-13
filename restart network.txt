@@ -1,0 +1,23 @@
+restart network
+
+# Stop monitor mode and switch to managed mode
+sudo airmon-ng stop wlan0
+
+# Or manually set to managed mode
+sudo ip link set wlan0 down
+sudo iwconfig wlan0 mode managed
+sudo ip link set wlan0 up
+
+# Verify mode changed
+iwconfig
+
+# Scan for networks
+sudo iwlist wlan0 scan | grep ESSID
+
+# Connect using wpa_supplicant or network manager
+sudo systemctl start NetworkManager
+sudo nmcli dev wifi connect "YourWiFiSSID" password "YourPassword"
+
+# Or use wpa_supplicant
+sudo wpa_supplicant -B -i wlan0 -c <(wpa_passphrase "YourSSID" "YourPassword")
+sudo dhclient wlan0
