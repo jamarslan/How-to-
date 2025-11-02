@@ -1,0 +1,14 @@
+dns - 120
+dns.count.queries - 153
+dns.qry.name == "google.com" - 14
+
+
+tcp - 1597
+udp - 1216
+icmp - 1
+
+!tcp - 1234
+!icmp - 2831
+tcp and !udp - 1597
+
+network loop
