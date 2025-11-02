@@ -1,0 +1,16 @@
+From 10.0.2.150 icmp_seq=1 Destination Host Unreachable
+-----
+cat /etc/resolv.conf
+--------
+ip route show
+--------
+sudo ip route del default
+-----
+sudo nmcli connection modify enp0s3 ipv4.gateway 10.0.2.1
+sudo nmcli connection down enp0s3
+sudo nmcli connection up enp0s3
+------
+ip route show default
+ping 8.8.8.8
+nslookup google.com
+-----------
