@@ -1,0 +1,19 @@
+Summary of Common objdump Options:
+
+-d: Disassemble the binary into assembly code.
+
+-t: Display the symbol table.
+
+-x: Show detailed headers and sections.
+
+-s: Display section data (e.g., strings).
+
+-h: Show section headers.
+
+-f: Display file format information.
+
+-r: Show relocation information.
+
+-g: Show debugging information.
+
+-b: Specify architecture for disassembly.
