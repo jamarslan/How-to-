@@ -1,0 +1,34 @@
+sudo systemctl start wazuh-manager
+
+curl -k -u 'admin:IaaR1234$' 'https://localhost:9200/_cat/indices?v'
+
+sudo systemctl status wazuh-manager
+
+sudo sytemctl restart wazuh-indexer
+
+sudo journalctl -u wazuh-indexer -f
+
+curl -I http://localhost:5601/app/wazuh
+
+sudo systemctl status wazuh-dashboard
+
+sudo systemctl daemon-reload
+
+sudo systemctl enable --now wazuh-dashboard
+
+ss -tlnp | grep 5601
+
+curl -I http://127.0.0.1:5601
+
+sudo systemctl stop wazuh-manager
+sudo systemctl stop wazuh-indexer
+sudo systemctl stop wazuh-dashboard
+
+
+These are the most important logs that you deal with at SOC:
+
+⿡ Windows Event Logs
+⿢ Firewall Logs
+⿣ Proxy Logs
+⿤ DNS Logs
+⿥ Authentication Logs
