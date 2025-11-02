@@ -1,0 +1,11 @@
+// download file in security onion
+sudo username@10.0.2.150
+wget pcap file link
+unzip pcap file
+sudo so-import-pcap filename
+
+// upload kali to security onion
+
+scp /home/arslan/injection.pcap username@10.0.2.150:/tmp/
+ssh username@10.0.2.150
+sudo so-import-pcap /tmp/injection.pcap
