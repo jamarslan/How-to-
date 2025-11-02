@@ -1,0 +1,10 @@
+-> Searching & Monitoring
+-> Dashboard
+-> Alerts
+-> Reports
+-> Indexes
+-> Data Forwarder
+-> Input Data
+-> Splunk Cmds
+-> Lookups
+-> 
