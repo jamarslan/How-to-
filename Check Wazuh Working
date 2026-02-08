@@ -1,0 +1,10 @@
+Step 1:
+sudo /var/ossec/bin/wazuh-control status   # it tell working of the components of wazuh 
+Step 2:
+sudo /var/ossec/bin/wazuh-control start     # run the components
+Step 3:
+sudo ls -l /var/log/ufw.log    # check the firewall logs in the ubuntu
+Step 4: 
+sudo tail -f /var/ossec/logs/alerts/alerts.log   # logs of system in wazuh
+
+
