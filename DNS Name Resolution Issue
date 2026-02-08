@@ -1,0 +1,28 @@
+how to solve dns name resolution
+Step 1:
+ping google.com
+Step 2:
+sudo chattr -i /etc/resolv.conf
+Step 3:
+sudo rm -f /etc/resolv.conf
+Step 4:
+sudo nano /etc/resolv.conf
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+Step 5:
+ping google.com
+
+sudo if firewall blocking
+
+sudo iptables -F
+sudo iptables -X
+sudo iptables -t nat -F
+sudo iptables -t nat -X
+sudo iptables -t mangle -F
+sudo iptables -t mangle -X
+sudo iptables -t raw -F
+sudo iptables -t raw -X
+
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
