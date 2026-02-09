@@ -1,12 +1,16 @@
 Step 1:
-sudo ufw enable
+sudo ufw enable    # enable the firewall to log the firewall blocking
 Step 2:
-sudo ufw status verbose
+sudo ufw status verbose   # tells the status of firewall
 Step 3:
-sudo ufw deny 12345/tcp
+sudo ufw deny 12345/tcp   # rule which block the port 12345
 Step 4:
-nc -v <machine_ip> 12345
+nc -v <machine_ip> 12345   # checking the working of firewall, it should block that port
 Step 5:
-sudo tail -f /var/log/ufw.log
+sudo tail -f /var/log/ufw.log    # looking the logs to check the blocking
 Step 6:
-sudo tail -f var/ossec/logs/alerts/alerts.log
+sudo tail -f var/ossec/logs/alerts/alerts.log   # checking the wazuh to verify, is it capturing the ufw logs
+Step 7:
+Edit the /var/ossec/etc/ossec.log    
+
+sudo journalctl -u wazuh-manger --no-pager -n 50
