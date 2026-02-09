@@ -1,0 +1,32 @@
+Step 1: 
+sudo apt update
+Step 2: Dowload and add GPG key
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo gpg --dearmor -o /usr/share/keyrings/wazuh-archive-keyring.gpg
+Step 3:  add repository
+echo "deb [signed-by=/usr/share/keyrings/wazuh-archive-keyring.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
+Step 4:
+sudo apt update
+Step 5:
+sudo apt install wazuh-agent -y
+Step 6:
+sudo nano /var/ossec/etc/ossec.conf   # add manager ip
+Step 7:
+sudo systemctl daemon-reload
+Step 8:
+sudo systemctl start wazuh-agent
+Step 9:
+sudo systemctl status wazuh-agent
+Step 10:
+sudo /var/ossec/bin/agent-auth -m 10.0.2.6 -A kali-agent -p MDA0IGthbGktYWdlbnQgMTAuMC4yLjE1IDkxNGM5OWYyMzZmNzE1Nzg2YjdhODNkY2FjNWE5ZDhjNDk3N2QwYTcxY2Y2YmI1NjRmNzhjMmZlZmMyZGVkYTE=
+Step 11:
+nc -vz 10.0.2.6 1515
+Step 12:
+sudo systemctl restart wazuh-agent    # check_all=allow    in directories monitoring
+Step 13:
+sudo tail -f /var/ossec/logs/ossec.log
+Step 14:
+sudo touch /etc/fim.txt
+Step 15:
+sudo echo "test" >> /etc/fim.txt
+Step 16:
+sudo tail -f /var/ossec/logs/ossec.log
