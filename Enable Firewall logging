@@ -1,0 +1,12 @@
+Step 1:
+sudo ufw enable
+Step 2:
+sudo ufw status verbose
+Step 3:
+sudo ufw deny 12345/tcp
+Step 4:
+nc -v <machine_ip> 12345
+Step 5:
+sudo tail -f /var/log/ufw.log
+Step 6:
+sudo tail -f var/ossec/logs/alerts/alerts.log
